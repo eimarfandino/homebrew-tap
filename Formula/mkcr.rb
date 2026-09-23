@@ -5,21 +5,21 @@
 class Mkcr < Formula
   desc "Create and list ServiceNow Standard Change requests without touching the UI"
   homepage "https://github.com/eimarfandino/snow-cli"
-  version "0.0.4"
+  version "0.0.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eimarfandino/snow-cli/releases/download/v0.0.4/snow-cli_darwin_amd64.tar.gz"
-      sha256 "b5aabecdfc65c3b9a38d29feda3873e061cfe6287b187b2116710a29c497170b"
+      url "https://github.com/eimarfandino/snow-cli/releases/download/v0.0.5/snow-cli_0.0.5_darwin_amd64.tar.gz"
+      sha256 "3d6269d49fadba08d80a7e75ebc45ca401aa38848027ba61012fcb89add5e8d8"
 
       define_method(:install) do
         bin.install "mkcr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eimarfandino/snow-cli/releases/download/v0.0.4/snow-cli_darwin_arm64.tar.gz"
-      sha256 "95ea84cf62b4055d014078306ab4e7317f57cdecbddf204bb33a65597d035bb5"
+      url "https://github.com/eimarfandino/snow-cli/releases/download/v0.0.5/snow-cli_0.0.5_darwin_arm64.tar.gz"
+      sha256 "3ce645bcc9ce06fff39385e6ee36090d31170497851b3dac66ddd6daf1d8cd84"
 
       define_method(:install) do
         bin.install "mkcr"
@@ -29,15 +29,15 @@ class Mkcr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eimarfandino/snow-cli/releases/download/v0.0.4/snow-cli_linux_amd64.tar.gz"
-      sha256 "e50865d205ebb5e56642370305ed4e1b01659af65a5382d28d50c8de60143307"
+      url "https://github.com/eimarfandino/snow-cli/releases/download/v0.0.5/snow-cli_0.0.5_linux_amd64.tar.gz"
+      sha256 "ba646a06a2e146abcf4c0db7a0db5c415cb807724dfbde0221a81fad66eeb891"
       define_method(:install) do
         bin.install "mkcr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eimarfandino/snow-cli/releases/download/v0.0.4/snow-cli_linux_arm64.tar.gz"
-      sha256 "088ec2216a8924363e46f3994b7a1248ae79a1de0d015d9ba64952dc3ce19e2e"
+      url "https://github.com/eimarfandino/snow-cli/releases/download/v0.0.5/snow-cli_0.0.5_linux_arm64.tar.gz"
+      sha256 "d7d024eaac216336e3dec8676f217845ec217a6470152be6dcdac17410e50d70"
       define_method(:install) do
         bin.install "mkcr"
       end
