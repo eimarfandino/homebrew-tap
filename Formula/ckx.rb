@@ -5,21 +5,21 @@
 class Ckx < Formula
   desc "Switch between AWS (EKS) and Azure (AKS) Kubernetes clusters from one CLI"
   homepage "https://github.com/eimarfandino/ckx"
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eimarfandino/ckx/releases/download/v0.0.2/ckx_0.0.2_darwin_amd64.tar.gz"
-      sha256 "293ee3ef30cce3ebbef3daf0e5480a08170d5ffe0e470ef4f5d0c4adb2b29db3"
+      url "https://github.com/eimarfandino/ckx/releases/download/v0.0.3/ckx_0.0.3_darwin_amd64.tar.gz"
+      sha256 "86d5a03e55c14c2a0829e1fd0a1733ba4207862c2ecb30de578c0c8aa8ae7eed"
 
       define_method(:install) do
         bin.install "ckx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eimarfandino/ckx/releases/download/v0.0.2/ckx_0.0.2_darwin_arm64.tar.gz"
-      sha256 "9cc09cad5f0d4a35c0d4e8039e778dc63407a60963c0f1f189169a905a1f0a0f"
+      url "https://github.com/eimarfandino/ckx/releases/download/v0.0.3/ckx_0.0.3_darwin_arm64.tar.gz"
+      sha256 "093aa7e1ea2af4ee5e2f04e5b3a99823e327a0076053e23af4cd46a170b05ed9"
 
       define_method(:install) do
         bin.install "ckx"
@@ -29,15 +29,15 @@ class Ckx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eimarfandino/ckx/releases/download/v0.0.2/ckx_0.0.2_linux_amd64.tar.gz"
-      sha256 "a9d645c88b9405f0cc5cf753566451c21f3375c7674e202ca2929c38ef235cb1"
+      url "https://github.com/eimarfandino/ckx/releases/download/v0.0.3/ckx_0.0.3_linux_amd64.tar.gz"
+      sha256 "36ba0b1a589e7b3754cf7dff2763827be63cb5d607dc59c500bfd7188492fc52"
       define_method(:install) do
         bin.install "ckx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eimarfandino/ckx/releases/download/v0.0.2/ckx_0.0.2_linux_arm64.tar.gz"
-      sha256 "8083d21dcaa986d787ae22f5fb9b0ec31c8e9d278182fc6515641a17b25be152"
+      url "https://github.com/eimarfandino/ckx/releases/download/v0.0.3/ckx_0.0.3_linux_arm64.tar.gz"
+      sha256 "31544dc92eacd5f7cbcb9f46d5a1514b6a54bd1f88af5c28bbbd1ab12b3d2229"
       define_method(:install) do
         bin.install "ckx"
       end
